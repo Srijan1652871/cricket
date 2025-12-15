@@ -122,12 +122,14 @@
             }
         }
 
+        /* MODIFIED: Reduced height from 400px to 200px for a proportional logo container */
         .logo-placeholder {
             width: 200px;
-            height: 400px;
+            height: 200px;
             margin: 0 auto 25px;
             border-radius: 10px;
-            display: flex;
+            /* Ensures images are centered within this box */
+            display: flex; 
             align-items: center;
             justify-content: center;
             font-size: 80px;
@@ -138,6 +140,15 @@
             background: rgba(0, 212, 255, 0.2);
             border-color: #00ff88;
             transform: scale(1.05);
+        }
+
+        /* CORRECTED: The most reliable way to scale an image within a container without distorting it */
+        .custom-logo {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto; /* Allow width to adjust based on aspect ratio */
+            height: auto; /* Allow height to adjust based on aspect ratio */
+            object-fit: contain; 
         }
 
         .tournament-name {
@@ -175,8 +186,8 @@
             }
 
             .logo-placeholder {
-                width: 150px;
-                height: 150px;
+                width: 200px;
+                height: 200px;
                 font-size: 60px;
             }
 
@@ -204,7 +215,7 @@
             <div class="col-lg-4 col-md-6 col-sm-12">
                 <a href="#" class="tournament-card" onclick="window.location.href='iplsquads.html';">
                     <div class="logo-placeholder">
-                        <img src="ipl.png" alt="Trophy Logo" class="custom-logo">
+                        <img src="images/ipl.png" alt="Trophy Logo" class="custom-logo">
                     </div>
                     <div class="tournament-name">Indian Premier League</div>
                 </a>
@@ -213,7 +224,7 @@
             <div class="col-lg-4 col-md-6 col-sm-12">
                 <a href="#" class="tournament-card" onclick="window.location.href='bblsquads.html';">
                     <div class="logo-placeholder">
-                        <img src="bbl.png" alt="Trophy Logo" class="custom-logo">
+                        <img src="images/bbl.png" alt="Trophy Logo" class="custom-logo">
                     </div>
                     <div class="tournament-name">Big Bash League</div>
                 </a>
@@ -222,7 +233,7 @@
             <div class="col-lg-4 col-md-6 col-sm-12">
                 <a href="#" class="tournament-card" onclick="window.location.href='sa20squads.html';">
                     <div class="logo-placeholder">
-                        <img src="sa20.png" alt="Trophy Logo" class="custom-logo">
+                        <img src="images/sa20.png" alt="Trophy Logo" class="custom-logo">
                     </div>
                     <div class="tournament-name">South Africa SA20</div>
                 </a>
@@ -231,7 +242,7 @@
             <div class="col-lg-4 col-md-6 col-sm-12">
                 <a href="#" class="tournament-card" onclick="window.location.href='ilt20squads.html';">
                     <div class="logo-placeholder">
-                        <img src="ilt20.png" alt="Trophy Logo" class="custom-logo">
+                        <img src="images/ilt20.png" alt="Trophy Logo" class="custom-logo">
                     </div>
                     <div class="tournament-name">UAE ILT20</div>
                 </a>
@@ -240,7 +251,7 @@
             <div class="col-lg-4 col-md-6 col-sm-12">
                 <a href="#" class="tournament-card" onclick="window.location.href='mlcsquads.html';">
                     <div class="logo-placeholder">
-                        <img src="mlc.png" alt="Trophy Logo" class="custom-logo">
+                        <img src="images/mlc.png" alt="Trophy Logo" class="custom-logo">
                     </div>
                     <div class="tournament-name">Major League Cricket</div>
                 </a>
@@ -263,6 +274,5 @@
         }
     </script>
 </body>
-
 
 </html>
