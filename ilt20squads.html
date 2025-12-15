@@ -377,10 +377,10 @@
     <script>
 
         const roleIcons = {
-            'BATTER': 'images/batter.png',
-            'BOWLER': 'images/bowler.png',
-            'WICKET KEEPER': 'images/wkt.png',
-            'ALL ROUNDER': 'images/allrounder.png'
+            'BATTER': 'batter.png',
+            'BOWLER': 'bowler.png',
+            'WICKET KEEPER': 'wkt.png',
+            'ALL ROUNDER': 'allrounder.png'
         };
 
         function goHome() {
@@ -481,7 +481,7 @@
                 const playerNumber = index < 11 ? index + 1 : 'Impact';
                 const isOverseas = player['Overseas'] && player['Overseas'].toUpperCase() === 'UAE';
 
-                const airplaneIcon = isOverseas ? '<img src="images/UAE.png" alt="Overseas Flight" class="icon-placeholder airplane-icon"/>' : '';
+                const airplaneIcon = isOverseas ? '<img src="UAE.png" alt="Overseas Flight" class="icon-placeholder airplane-icon"/>' : '';
 
                 const roleIconPath = getRoleIconPath(player['Role']);
 
@@ -596,5 +596,6 @@
         });
     </script>
 </body>
+
 
 </html>
